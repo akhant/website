@@ -19,7 +19,6 @@
 </svelte:head>
 
 <div class="page">
-	<h2>Skills</h2>
 	<section class="content">
 		<div class="skill-list">
 			<div class="skill-box">
@@ -112,14 +111,6 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: start;
-	}
-
-	h2 {
-		font-size: max(2vw, 20px);
-		text-align: center;
-		margin-bottom: 0;
-		padding-top: 10px;
-		font-weight: bold;
 	}
 
 	.skill-list {

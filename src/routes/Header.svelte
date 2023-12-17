@@ -37,6 +37,10 @@
 		z-index: 2;
 	}
 
+	[aria-current="page"] a {
+		color: var(--color-theme-1);
+	}
+
 	nav {
 		display: flex;
 		justify-content: center;
