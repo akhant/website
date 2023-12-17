@@ -1,14 +1,19 @@
 <script>
-	import { createBackgroundAnimation } from '../functions/createBackgroundAnimation'
+	import { createBackgroundAnimation } from '../functions/createBackgroundAnimation';
 	import { onMount } from 'svelte';
-	onMount(()=> {
-		createBackgroundAnimation()
-	})
+	onMount(() => {
+		createBackgroundAnimation();
+	});
 </script>
 
 <svelte:head>
 	<title>Home</title>
 	<meta name="description" content="Anton Khantelev website" />
+	<style>
+		header nav a {
+			color: var(--color-text-dark);
+		}
+	</style>
 </svelte:head>
 
 <section class="wrapper">
@@ -28,7 +33,8 @@
 		flex: 0.6;
 	}
 
-	h1,h2 {
+	h1,
+	h2 {
 		color: var(--color-text-dark);
 		text-transform: uppercase;
 		margin: 2rem 0;
@@ -39,12 +45,12 @@
 		width: 100%;
 	}
 
-	h1	{
+	h1 {
 		font-size: 6vw;
 		font-weight: 800;
 	}
 
-	h2	{
+	h2 {
 		font-size: 2vw;
 	}
 

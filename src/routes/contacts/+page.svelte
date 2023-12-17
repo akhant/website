@@ -8,6 +8,13 @@
 <svelte:head>
 	<title>Contacts</title>
 	<meta name="description" content="Contacts" />
+
+	<style>
+		header nav a {
+			color: rgba(255, 255, 255, 0.7);
+		}
+	</style>
+
 </svelte:head>
 
 <div class="page">

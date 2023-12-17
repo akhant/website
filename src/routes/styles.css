@@ -1,5 +1,4 @@
 @import '@fontsource/fira-mono';
-@import '@fontsource/lobster-two';
 
 :root {
 	--font-body: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
@@ -25,6 +24,10 @@
 body {
 	margin: 0;
 	
+}
+
+html::-webkit-scrollbar {
+	display: none
 }
 
 h1,

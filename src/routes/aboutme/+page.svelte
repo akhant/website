@@ -5,21 +5,24 @@
 <svelte:head>
 	<title>About</title>
 	<meta name="description" content="About me" />
+	<style>
+		header nav ul li a {
+			color: rgba(255, 255, 255, 0.7);
+		}
+
+	</style>
 </svelte:head>
 
 <div class="page">
-
 	<div class="photo">
 		<img src="/photo-opt.jpg" alt="Anton Khantelev" />
 	</div>
 	<div class="content">
 		<div class="text">
-
 			<div class="description">
-
 				<p>
-					I'm dedicated <b>middle+/senior</b> frontend developer with <b>more than 3 years</b> of commercial experience,
-					contributing to innovative web applications and user interfaces.
+					I'm dedicated <b>middle+/senior</b> frontend developer with <b>more than 3 years</b> of commercial
+					experience, contributing to innovative web applications and user interfaces.
 				</p>
 				<p>
 					Proficient in front-end technologies, responsive design, and cross-browser compatibility.
@@ -34,14 +37,11 @@
 					applications.
 				</p>
 				<p>
-					I have strong experience in developing complex web applications and services, such as system
-					for managing business processes and electronic document management.
+					I have strong experience in developing complex web applications and services, such as
+					system for managing business processes and electronic document management.
 				</p>
-
 			</div>
-			<div class="photo-space">
-
-			</div>
+			<div class="photo-space" />
 
 			<div class="additional-info">
 				<div>
@@ -52,24 +52,17 @@
 				<div>
 					<h3>Languages</h3>
 					<ul>
-						<li>
-							English – B2 
-						</li>
-						<li>
-							Russian - Native
-						</li>	
+						<li>English – B2</li>
+						<li>Russian - Native</li>
 					</ul>
 				</div>
 			</div>
-
-	</div>
-		
+		</div>
 	</div>
 
 	<div class="download-button-wrapper">
 		<CoolButton />
 	</div>
-
 </div>
 
 <style>
@@ -80,7 +73,7 @@
 		background: linear-gradient(
 			-5deg,
 			rgba(8, 10, 10) 33%,
-			rgba(27, 34, 40)  34% 40%,
+			rgba(27, 34, 40) 34% 40%,
 			rgba(28, 35, 41) 46%,
 			rgba(32, 40, 47) 56%,
 			rgba(35, 44, 51) 66%,
@@ -115,7 +108,8 @@
 		display: flex;
 	}
 
-	.text p, h3 {
+	.text p,
+	h3 {
 		padding: 0 10px;
 	}
 
@@ -170,9 +164,7 @@
 		}
 	}
 
-
 	@media screen and (max-width: 900px) {
-
 	}
 
 	@media screen and (max-width: 540px) {
@@ -188,7 +180,6 @@
 		.additional-info {
 			width: 100%;
 		}
-
 	}
 
 	@media screen and (max-width: 360px) {
@@ -203,6 +194,5 @@
 		.photo img {
 			width: max(320px, 100%);
 		}
-
 	}
 </style>

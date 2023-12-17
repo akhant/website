@@ -6,19 +6,19 @@
 <header>
 	<nav>
 		<ul>
-			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
+			<li aria-current={$page.url.pathname === '/' ? 'page' : false}>
 				<a href="/">Home</a>
 			</li>
-			<li aria-current={$page.url.pathname === '/aboutme' ? 'page' : undefined}>
+			<li aria-current={$page.url.pathname === '/aboutme' ? 'page' : false}>
 				<a href="/aboutme">about me</a>
 			</li>
-			<li aria-current={$page.url.pathname === '/skills' ? 'page' : undefined}>
+			<li aria-current={$page.url.pathname === '/skills' ? 'page' : false}>
 				<a href="/skills">skills</a>
 			</li>
-			<li aria-current={$page.url.pathname === '/experience' ? 'page' : undefined}>
+			<li aria-current={$page.url.pathname === '/experience' ? 'page' : false}>
 				<a href="/experience">experience</a>
 			</li>
-			<li aria-current={$page.url.pathname === '/contacts' ? 'page' : undefined}>
+			<li aria-current={$page.url.pathname === '/contacts' ? 'page' : false}>
 				<a href="/contacts">contacts</a>
 			</li>
 		</ul>
@@ -65,12 +65,12 @@
 		height: 100%;
 	}
 
-	nav a {
+	header nav a {
 		display: flex;
 		height: 100%;
 		align-items: center;
 		padding: 0 0.5rem;
-		color: var(--color-text-dark);
+		
 		font-weight: 700;
 		font-size: 0.8rem;
 		text-transform: uppercase;
@@ -80,7 +80,7 @@
 		white-space: nowrap;
 	}
 
-	a:hover {
+	header nav li a:hover {
 		color: var(--color-theme-1);
 	}
 

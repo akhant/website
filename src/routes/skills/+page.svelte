@@ -11,6 +11,11 @@
 <svelte:head>
 	<title>Skills</title>
 	<meta name="description" content="Skills" />
+	<style>
+		header nav a {
+			color: var(--color-text-dark);
+		}
+	</style>
 </svelte:head>
 
 <div class="page">
@@ -98,7 +103,7 @@
 		display: flex;
 		margin: 0;
 		color: black;
-		width: 100%
+		width: 100%;
 	}
 
 	.circle-words {
@@ -145,7 +150,7 @@
 		position: relative;
 		/* position: absolute; */
 
-/* 		top: 50%; */
+		/* 		top: 50%; */
 		top: 20px;
 		font: bold 12px sans-serif;
 		visibility: hidden;
