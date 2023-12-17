@@ -110,7 +110,7 @@
 		width: 50%;
 		flex-direction: column;
 		align-items: center;
-		justify-content: start;
+		justify-content: center;
 	}
 
 	.skill-list {
@@ -139,9 +139,6 @@
 
 	.outer {
 		position: relative;
-		/* position: absolute; */
-
-		/* 		top: 50%; */
 		top: 20px;
 		font: bold 12px sans-serif;
 		visibility: hidden;
