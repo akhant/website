@@ -30,7 +30,7 @@
 	header {
 		display: flex;
 		justify-content: space-between;
-		position: fixed;
+		position: absolute;
 		top: 0;
 		height: var(--header-height);
 		width: 100%;
