@@ -13,8 +13,6 @@
 	--color-theme-2: #4075a6;
 	--color-text: rgba(255, 255, 255, 1);
 	--color-text-dark: rgba(0,0,0,1);
-	--column-width: 42rem;
-	--column-margin-top: 4rem;
 	font-family: var(--font-body);
 	color: var(--color-text-dark);
 	--header-height: 50px;
@@ -23,21 +21,10 @@
 
 body {
 	margin: 0;
-	
 }
 
 html::-webkit-scrollbar {
 	display: none
-}
-
-h1,
-h2,
-p {
-	font-weight: 400;
-}
-
-p {
-	line-height: 1.5;
 }
 
 a {
@@ -47,35 +34,6 @@ a {
 
 a:hover {
 	text-decoration: underline;
-}
-
-h1 {
-	font-size: 2rem;
-	text-align: center;
-}
-
-h2 {
-	font-size: 1rem;
-}
-
-pre {
-	font-size: 16px;
-	font-family: var(--font-mono);
-	background-color: rgba(255, 255, 255, 0.45);
-	border-radius: 3px;
-	box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
-	padding: 0.5em;
-	overflow-x: auto;
-	color: var(--color-text-dark);
-}
-
-.text-column {
-	display: flex;
-	max-width: 48rem;
-	flex: 0.6;
-	flex-direction: column;
-	justify-content: center;
-	margin: 0 auto;
 }
 
 input,
@@ -94,14 +52,3 @@ button:focus:not(:focus-visible) {
 	}
 }
 
-.visually-hidden {
-	border: 0;
-	clip: rect(0 0 0 0);
-	height: auto;
-	margin: 0;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
-	white-space: nowrap;
-}

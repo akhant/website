@@ -52,6 +52,7 @@
 
 	h2 {
 		font-size: 2vw;
+		font-weight: normal;
 	}
 
 	:root {

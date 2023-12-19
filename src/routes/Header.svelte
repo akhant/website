@@ -89,7 +89,7 @@
 	}
 
 	@media screen and (max-width: 430px) {
-		nav a {
+		header nav li a {
 			font-size: 0.7rem;
 			font-weight: normal;
 		}
@@ -97,14 +97,14 @@
 
 	
 	@media screen and (max-width: 380px) {
-		nav a {
+		header nav li a {
 			font-size: 0.6rem;
 			font-weight: normal;
 		}
 	}
 
 	@media screen and (max-width: 340px) {
-		nav a {
+		header nav li a {
 			font-size: 0.5rem;
 			font-weight: normal;
 		}
