@@ -74,7 +74,7 @@
 
 	.contact {
 		z-index: 2;
-		background: rgba(255, 255, 255, 0.5);
+		background: rgba(255, 255, 255, 0.3);
 		padding: 40px 60px;
 		border-radius: 10px;
 		width: 320px;
