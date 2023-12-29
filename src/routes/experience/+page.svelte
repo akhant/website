@@ -218,6 +218,7 @@
 		margin-left: 15px;
 		position: relative;
 		margin-top: 100px;
+		z-index: 2;
 	}
 	.container::before,
 	.container::after {
@@ -241,6 +242,7 @@
 		animation: on-scrolling both linear;
 		animation-timeline: scroll();
 		animation-range: 10vh;
+		z-index: 1;
 	}
 	.container::before {
 		background-size: 1px 150px;
@@ -277,11 +279,11 @@
 		--text-offset-1: 10;
 		--text-offset-2: 10;
 		--text-offset-3: 10;
-		--text-offset-4: 10;
 		animation: on-scrolling both linear;
 		animation-timeline: scroll();
 		animation-range: 10vh;
-		z-index: 2000;
+		z-index: 3;
+		position: relative;
 	}
 
 	.container::after {
