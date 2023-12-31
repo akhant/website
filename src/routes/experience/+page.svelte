@@ -1,4 +1,12 @@
 <script>
+	import { onMount } from 'svelte';
+
+	let browserName = '';
+
+	onMount(async () => {
+		const System = await import('svelte-system-info');
+		browserName = System.default.BrowserName;
+	});
 </script>
 
 <svelte:head>
@@ -12,7 +20,7 @@
 	</style>
 </svelte:head>
 
-<div class="page">
+<div class={browserName === 'Chrome' ? 'page chrome' : 'page'}>
 	<div class="scrollbar" />
 	<div class="container">
 		<div class="job">
@@ -160,11 +168,6 @@
 		inherits: false;
 		initial-value: 0.1;
 	}
-	@property --opacity-4 {
-		syntax: '<number>';
-		inherits: false;
-		initial-value: 0.1;
-	}
 
 	@property --text-offset-1 {
 		syntax: '<number>';
@@ -181,13 +184,8 @@
 		inherits: false;
 		initial-value: 10;
 	}
-	@property --text-offset-4 {
-		syntax: '<number>';
-		inherits: false;
-		initial-value: 10;
-	}
 
-	.scrollbar {
+	.chrome .scrollbar {
 		width: 4px;
 		height: 100%;
 		background-color: var(--scrollbar-color);
@@ -220,6 +218,13 @@
 		margin-top: 100px;
 		z-index: 2;
 	}
+
+	:not(.chrome) .container::before,
+	:not(.chrome) .container::after {
+		background: none;
+		display: none;
+	}
+
 	.container::before,
 	.container::after {
 		content: '';
@@ -269,13 +274,14 @@
 		);
 		background-clip: text;
 		-webkit-background-clip: text;
-		color: transparent;
+
 		padding: 20px;
 		line-height: 1.5em;
+
+		color: transparent;
 		--opacity-1: 0.1;
 		--opacity-2: 0.1;
 		--opacity-3: 0.1;
-		--opacity-4: 0.1;
 		--text-offset-1: 10;
 		--text-offset-2: 10;
 		--text-offset-3: 10;
@@ -284,6 +290,13 @@
 		animation-range: 10vh;
 		z-index: 3;
 		position: relative;
+	}
+
+	:not(.chrome) .job {
+		color: rgba(255, 255, 255, 0.3);
+		--opacity-1: 1;
+		--opacity-2: 1;
+		--opacity-3: 1;
 	}
 
 	.container::after {
@@ -302,10 +315,6 @@
 		opacity: var(--opacity-3);
 		transform: translateY(calc(var(--text-offset-3) * 1px));
 	}
-	.job:nth-child(4) {
-		opacity: var(--opacity-4);
-		transform: translateY(calc(var(--text-offset-4) * 1px));
-	}
 
 	@keyframes on-scrolling {
 		0% {
@@ -314,74 +323,116 @@
 			--opacity-1: 1;
 			--opacity-2: 0.1;
 			--opacity-3: 0.1;
-			--opacity-4: 0.1;
 
 			--text-offset-1: 0;
 			--text-offset-2: 10;
 			--text-offset-3: 10;
-			--text-offset-4: 10;
 		}
 		1% {
 			--scrollbar-color: rgba(255, 255, 255, 0.1);
 		}
-		5% {
-			--opacity-1: 1;
-			--opacity-2: 0.1;
-			--opacity-3: 0.1;
-			--opacity-4: 0.1;
 
-			--text-offset-1: 0;
-			--text-offset-2: 10;
-			--text-offset-3: 10;
-			--text-offset-4: 10;
-		}
 		50% {
 			--scroll-y-position: 50%;
 			--reflection-y-position: 50%;
 			--opacity-1: 0.1;
 			--opacity-2: 1;
 			--opacity-3: 0.1;
-			--opacity-4: 0.1;
 
 			--text-offset-1: 10;
 			--text-offset-2: 0;
 			--text-offset-3: 10;
-			--text-offset-4: 10;
 		}
 		80% {
 			--opacity-1: 0.1;
 			--opacity-2: 0.1;
 			--opacity-3: 1;
-			--opacity-4: 0.1;
 
 			--text-offset-1: 10;
 			--text-offset-2: 10;
 			--text-offset-3: 0;
-			--text-offset-4: 10;
-		}
-		95% {
-			--opacity-1: 0.1;
-			--opacity-2: 0.1;
-			--opacity-3: 0.1;
-			--opacity-4: 1;
-
-			--text-offset-1: 10;
-			--text-offset-2: 10;
-			--text-offset-3: 10;
-			--text-offset-4: 0;
 		}
 		100% {
 			--text-offset-1: 10;
 			--text-offset-2: 10;
 			--text-offset-3: 10;
-			--text-offset-4: 10;
 			--opacity-1: 0.1;
 			--opacity-2: 0.1;
 			--opacity-3: 0.1;
-			--opacity-4: 0.1;
 			--scroll-y-position: 105%;
 			--reflection-y-position: 115%;
 			--scrollbar-color: rgba(255, 255, 255, 0.1);
+		}
+	}
+
+	@media screen and (max-width: 540px) {
+		.container {
+			margin-top: 40px;
+		}
+		@keyframes on-scrolling {
+			0% {
+				--scroll-y-position: 10%;
+				--reflection-y-position: 12%;
+				--opacity-1: 1;
+				--opacity-2: 0.1;
+				--opacity-3: 0.1;
+
+				--text-offset-1: 0;
+				--text-offset-2: 10;
+				--text-offset-3: 10;
+			}
+			1% {
+				--scrollbar-color: rgba(255, 255, 255, 0.1);
+			}
+			5% {
+				--opacity-1: 1;
+				--opacity-2: 0.1;
+				--opacity-3: 0.1;
+
+				--text-offset-1: 0;
+				--text-offset-2: 10;
+				--text-offset-3: 10;
+			}
+			50% {
+				--scroll-y-position: 50%;
+				--reflection-y-position: 50%;
+				--opacity-1: 0.1;
+				--opacity-2: 1;
+				--opacity-3: 0.1;
+
+				--text-offset-1: 10;
+				--text-offset-2: 0;
+				--text-offset-3: 10;
+			}
+			80% {
+				--opacity-1: 0.1;
+				--opacity-2: 0.1;
+				--opacity-3: 1;
+
+				--text-offset-1: 10;
+				--text-offset-2: 10;
+				--text-offset-3: 0;
+			}
+			95% {
+				--opacity-1: 0.1;
+				--opacity-2: 0.1;
+				--opacity-3: 0.1;
+
+				--text-offset-1: 10;
+				--text-offset-2: 10;
+				--text-offset-3: 10;
+			}
+			100% {
+				--text-offset-1: 10;
+				--text-offset-2: 10;
+				--text-offset-3: 10;
+				--opacity-1: 0.1;
+				--opacity-2: 0.1;
+				--opacity-3: 0.1;
+				--scroll-y-position: 105%;
+				--reflection-y-position: 115%;
+				--scrollbar-color: rgba(255, 255, 255, 0.1);
+			}
 		}
 	}
 </style>

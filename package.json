@@ -36,6 +36,7 @@
 	"type": "module",
 	"dependencies": {
 		"@fontsource/fira-mono": "^4.5.10",
-		"gsap": "^3.12.2"
+		"gsap": "^3.12.2",
+		"svelte-system-info": "^1.0.0"
 	}
 }
