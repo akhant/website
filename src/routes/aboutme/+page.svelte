@@ -9,7 +9,6 @@
 		header nav ul li a {
 			color: rgba(255, 255, 255, 0.7);
 		}
-
 	</style>
 </svelte:head>
 
@@ -61,7 +60,9 @@
 	</div>
 
 	<div class="download-button-wrapper">
-		<CoolButton />
+		<a href="static/Anton_Khantelev_Frontend_CV.pdf">
+			<CoolButton />
+		</a>
 	</div>
 </div>
 

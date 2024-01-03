@@ -26,6 +26,7 @@
 		font-family: inherit;
 		font-weight: 500;
 		z-index: 2;
+		cursor: pointer;
 	}
 	button:after {
 		content: '';
