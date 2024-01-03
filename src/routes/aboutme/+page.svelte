@@ -60,7 +60,7 @@
 	</div>
 
 	<div class="download-button-wrapper">
-		<a href="static/Anton_Khantelev_Frontend_CV.pdf">
+		<a href="Anton_Khantelev_Frontend_CV.pdf">
 			<CoolButton />
 		</a>
 	</div>
