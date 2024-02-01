@@ -95,6 +95,8 @@
 	.contact-item__icon {
 		margin-right: 10px;
 		position: relative;
+		width: 25px;
+		height: 25px;
 	}
 
 	.contact-item__icon img {
@@ -105,11 +107,7 @@
 		width: 30px;
 		position: relative;
 		left: -3px;
-	}
-
-	.item__github .contact-item__text {
-		position: relative;
-		left: -5px;
+		top: -2px;
 	}
 
 	.contact-item__text a {
